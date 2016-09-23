@@ -41,12 +41,17 @@ a{
 }
 .styleButton{
 	background-color: #5DB449;
-  border-radius: 10px;
-  color: white;
-  padding: 8px 10px;
-  text-align: center;
-  text-decoration: none;
+	border-radius: 10px;
+	color: white;
+	padding: 8px 10px;
+	text-align: center;
+	text-decoration: none;
 }
 .enlaceTarjeta{
+	width: 500px;
+}
+.enlaceTarjeta:hover{
+	background-color: #CDD2D4; 
+	text-decoration: underline;
 	color: gray;
 }

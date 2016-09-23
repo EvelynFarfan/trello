@@ -38,7 +38,7 @@ window.addEventListener("load", function() {
 			enlace.href = "#";
 			var textoEnlace = document.createTextNode("Añadir una tarjeta ...");
 			enlace.appendChild(textoEnlace);
-			formulario.appendChild(enlace).classList.add("enlaceTarjeta");
+			formulario.appendChild(enlace).classList.add("enlaceTarjeta", "enlaceTarjeta:hover");
 		});
 	};
 }); 
