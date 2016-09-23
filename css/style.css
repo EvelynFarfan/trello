@@ -2,7 +2,6 @@ body{
 	margin: 0;
 	padding: 0;
 	background-color: #00AECC;
-	color: #fff;
 	font-family: Arial;
 }
 header{
@@ -47,4 +46,7 @@ a{
   padding: 8px 10px;
   text-align: center;
   text-decoration: none;
+}
+.enlaceTarjeta{
+	color: gray;
 }
