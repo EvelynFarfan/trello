@@ -20,6 +20,7 @@ function newLista(e){
 	contenedor.appendChild(formulario).classList.add("styleForm");
 
 	var input = document.createElement("input");
+	input.focus();
 	formulario.appendChild(input).classList.add("styleInput");
 
 	var boton = document.createElement("button");
@@ -30,7 +31,7 @@ function newLista(e){
 
 	boton.addEventListener("click", nuevaTarjeta);
 
-		function nuevaTarjeta(e){
+	function nuevaTarjeta(e){
 		e.preventDefault();
 		input.style.display = "none";
 		boton.style.display = "none";
@@ -38,50 +39,43 @@ function newLista(e){
 		var textoLista = input.value;
 		var tittleLista = document.createElement("div");
 		tittleLista.innerHTML = textoLista;
-		formulario.appendChild(tittleLista);
+		formulario.appendChild(tittleLista).classList.add("bold");
 
 		var enlace = document.createElement("a");
 		enlace.href = "#";
 		var textoEnlace = document.createTextNode("Añadir una tarjeta ...");
 		enlace.appendChild(textoEnlace);
-		formulario.appendChild(enlace).classList.add("enlaceTarjeta", "enlaceTarjeta:hover");
+		formulario.appendChild(enlace).classList.add("enlaceTarjeta");
 
 		listaSiguiente();
-		};
+		enlace.addEventListener("click", añadirTarjeta);
 
-		function listaSiguiente(e){
-			contListas.appendChild(agregarLista);
-			agregarLista.style.color = "#fff";
-			agregarLista.style.display = "block";
-			agregarLista.classList.add("left");
+		function añadirTarjeta(e){
+			e.preventDefault();
+			enlace.style.display = "none";
+			var añadirTarjeta = document.createElement("textarea");
+			añadirTarjeta.classList.add("textArea");
+			// formulario.insertBefore(añadirTarjeta, formulario.childNodes[3]);
+			formulario.appendChild(añadirTarjeta);
+
+			var botonAñadir = document.createElement("button");
+			botonAñadir.classList.add("styleButton");
+			// formulario.insertBefore(botonAñadir, formulario.childNodes[4]);
+			formulario.appendChild(botonAñadir);
+
+			var textAgregar = document.createTextNode("Añadir");
+			botonAñadir.appendChild(textAgregar);
+
+			botonAñadir.addEventListener("click", guardarTexto);
 		}
+	}
 };
 
-// function nuevaTarjeta(e){
-// 	e.preventDefault();
-// 	input.style.display = "none";
-// 	boton.style.display = "none";
+function listaSiguiente(){
+	contListas.appendChild(agregarLista);
+	agregarLista.style.color = "#fff";
+	agregarLista.style.display = "block";
+	agregarLista.classList.add("left");
+}
 
-// 	var textoLista = input.value;
-// 	var tittleLista = document.createElement("div");
-// 	tittleLista.innerHTML = textoLista;
-// 	formulario.appendChild(tittleLista);
-
-// 	var enlace = document.createElement("a");
-// 	enlace.href = "#";
-// 	var textoEnlace = document.createTextNode("Añadir una tarjeta ...");
-// 	enlace.appendChild(textoEnlace);
-// 	formulario.appendChild(enlace).classList.add("enlaceTarjeta", "enlaceTarjeta:hover");
-
-// 	contenedor.insertBefore(agregarLista, contenedor[0]);
-// 	agregarLista.classList.add("tarjetaNuevaD");
-// };
-
-
-
-// function agregarLista(e){
-
-// 	e.preventDefault();
-// 	// var boton = document.createElement("button");
-// 	newLista();
-// }
+// nodoQueSeráPadreDelNuevoNodo.insertBefore(nuevoNodo, nodoAntesDelQueHaremosLaInserción);
