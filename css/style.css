@@ -9,19 +9,24 @@ header{
 	height: 60px;
 	background-color: #0094AE;	
 }
+img{
+	width: 100px;
+	margin: 15px 600px;
+}
 section{
 	padding: 40px;
+	position: relative;
 }
 a{
 	color: #fff;
 	text-decoration: none;
 }
-#añadirLista{
+#agregarLista{
 	padding: 10px 80px 10px 10px;
 	background-color: #0094AE;
 	border-radius: 10px;
 }
-#añadirLista:hover{
+#agregarLista:hover{
 	background-color: #007A8F;
 }
 #formLista{
@@ -49,9 +54,23 @@ a{
 }
 .enlaceTarjeta{
 	width: 500px;
+	color: gray;
 }
 .enlaceTarjeta:hover{
 	background-color: #CDD2D4; 
 	text-decoration: underline;
 	color: gray;
+}
+.tarjetaNuevaD{
+	display: block;
+  width: 130px;
+  float: left;
+  margin-left: 240px;
+  margin-top: -55px;
+  color: #fff;
+}
+.left{
+  top: 40px;
+  left: 280px;
+  position: absolute;/
 }
