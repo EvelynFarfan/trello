@@ -40,6 +40,8 @@ a{
 	background-color: #E2E4E6;
 	padding: 10px;
 	border-radius: 5px;
+	display: inline-block;
+	margin-left: 10px;
 }
 .styleInput{
 	padding: 9px;

@@ -78,7 +78,7 @@ function newLista(e){
 
 				añadirTarjeta.style.display = "none";
 				botonAñadir.style.display = "none";
-				enlace.style.display = "block";
+				enlace.style.display = "inline-block";
 			}
 		}
 	}
@@ -87,8 +87,9 @@ function newLista(e){
 function listaSiguiente(){
 	contListas.appendChild(agregarLista);
 	agregarLista.style.color = "#fff";
-	agregarLista.style.display = "block";
-	agregarLista.classList.add("left");
+	agregarLista.style.display = "inline-block";
+	// agregarLista.classList.add("left");
+	formulario.style.display = "inline-block";
 }
 
 // nodoQueSeráPadreDelNuevoNodo.insertBefore(nuevoNodo, nodoAntesDelQueHaremosLaInserción);
