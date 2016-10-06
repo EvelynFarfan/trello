@@ -32,6 +32,9 @@ a{
 #formLista{
 	display: none;
 }
+.bold{
+	font-weight: bold;
+}
 .styleForm{
 	width: 200px;
 	background-color: #E2E4E6;
@@ -41,7 +44,7 @@ a{
 .styleInput{
 	padding: 9px;
 	background-color: #C5C7C9;
-	border-radius: 10px;
+	border-radius: 5px;
 	margin-bottom: 5px;
 }
 .styleButton{
@@ -53,11 +56,9 @@ a{
 	text-decoration: none;
 }
 .enlaceTarjeta{
-	width: 500px;
 	color: gray;
 }
 .enlaceTarjeta:hover{
-	background-color: #CDD2D4; 
 	text-decoration: underline;
 	color: gray;
 }
@@ -73,4 +74,17 @@ a{
   top: 40px;
   left: 280px;
   position: absolute;/
+}
+.textArea{
+	width: 95%;
+	margin: 5px 0;
+	border-radius: 5px;
+	border-color: transparent;
+}
+.styleDiv{
+	background-color: #fff;
+	width: 95%;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 8px 0;
 }

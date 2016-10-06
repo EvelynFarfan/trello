@@ -67,6 +67,19 @@ function newLista(e){
 			botonAñadir.appendChild(textAgregar);
 
 			botonAñadir.addEventListener("click", guardarTexto);
+
+			function guardarTexto(e){
+				e.preventDefault();
+				var guardarTexto = document.createElement("div");
+				var textoTextArea = añadirTarjeta.value;
+				guardarTexto.innerHTML = textoTextArea;
+				formulario.insertBefore(guardarTexto, formulario.childNodes[3]);
+				guardarTexto.classList.add("styleDiv");
+
+				añadirTarjeta.style.display = "none";
+				botonAñadir.style.display = "none";
+				enlace.style.display = "block";
+			}
 		}
 	}
 };
