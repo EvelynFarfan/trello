@@ -23,20 +23,20 @@ function newLista(e){
 	formulario.addEventListener("drop", soltar);
 	formulario.addEventListener("dragover", arrastrarSobre);
 	
-	function soltar(e){
-		//var idArrastrado = e.dataTransfer.getData("text");
-		var elementoArrastrado = document.getElementById(e.dataTransfer.getData("text"));
-		this.insertBefore(elementoArrastrado, this.children[3]);
-		this.classList.remove("over");
-		// this.classList.add("animated","shake");
-	}
-
 	function entraArrastrar(e){
 		this.classList.add("over");
 	}
 
 	function arrastrarSobre(e){ 
 		e.preventDefault();
+	}
+
+	function soltar(e){
+		//var idArrastrado = e.dataTransfer.getData("text");
+		var elementoArrastrado = document.getElementById(e.dataTransfer.getData("text"));
+		this.insertBefore(elementoArrastrado, this.children[3]);
+		this.classList.remove("over");
+		// this.classList.add("animated","shake");
 	}
 
 	var input = document.createElement("input");

@@ -98,6 +98,10 @@ a{
 	margin: 8px 0;
 	word-wrap: break-word;
 }
+.over{
+	border-style: outset;
+	/*border: 1px  #C1C3C4;*/
+}
 .colorDnD{
-	background-color: gray;
+	background-color: #0094AE;
 }
