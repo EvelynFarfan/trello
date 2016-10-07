@@ -21,6 +21,9 @@ a{
 	color: #fff;
 	text-decoration: none;
 }
+#formulario-papa{
+	display: inline-block;
+}
 #agregarLista{
 	padding: 10px 80px 10px 10px;
 	background-color: #0094AE;
@@ -44,6 +47,7 @@ a{
 	display: inline-block;
 	margin-left: 10px;
 	margin-bottom: 10px;
+	margin-right: 10px;
 	vertical-align: top;
 }
 .styleInput{
@@ -92,4 +96,9 @@ a{
 	border-radius: 5px;
 	padding: 5px;
 	margin: 8px 0;
+	word-wrap: break-word;
+}
+.over{
+	border : 1px solid blue;
+	/*background-color: #0094AE;*/
 }
