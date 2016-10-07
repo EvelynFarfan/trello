@@ -98,7 +98,6 @@ a{
 	margin: 8px 0;
 	word-wrap: break-word;
 }
-.over{
-	border : 1px solid blue;
-	/*background-color: #0094AE;*/
+.colorDnD{
+	background-color: gray;
 }

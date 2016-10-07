@@ -26,11 +26,12 @@ function newLista(e){
 	function soltar(e){
 		//var idArrastrado = e.dataTransfer.getData("text");
 		var elementoArrastrado = document.getElementById(e.dataTransfer.getData("text"));
-		this.insertBefore(elementoArrastrado, this.children[4]);
+		this.insertBefore(elementoArrastrado, this.children[3]);
 		this.classList.remove("over");
+		// this.classList.add("animated","shake");
 	}
 
-		function entraArrastrar(e){
+	function entraArrastrar(e){
 		this.classList.add("over");
 	}
 
@@ -101,17 +102,18 @@ function newLista(e){
 				guardarTexto.draggable = true;
 				guardarTexto.id = "id" + contador;
 				guardarTexto.addEventListener("dragstart", empiezaArrastrar);
-				// guardarTexto.addEventListener("dragend", terminarArrastrar);
+				guardarTexto.addEventListener("dragend", terminarArrastrar);
 				contador+=1; 
 
 				function empiezaArrastrar(e){
 					e.dataTransfer.setData("text", this.id);
-					
+					this.classList.add("colorDnD");
 				}
 
-				// function terminarArrastrar(e){
-				// 	this.style.opacity = null;
-				// }
+				function terminarArrastrar(e){
+					this.classList.remove("colorDnD");
+					
+				}
 			}
 		}
 	}
