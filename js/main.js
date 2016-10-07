@@ -4,7 +4,7 @@ var agregarLista = document.getElementById("agregarLista");
 var contListas = document.getElementById("contListas");
 var botonInicio = document.getElementById("botonInicio");
 
-var contador = 1;
+var contador = 0;
 
 
 function cargarPagina (e){
@@ -18,27 +18,24 @@ function newLista(e){
 
 	var formulario = document.createElement("form");
 	contenedor.appendChild(formulario).classList.add("styleForm");
-	formulario.setAttribute("id","contentBox" + contador);
 
 	formulario.addEventListener("dragenter", entraArrastrar);
-	formulario.addEventListener("dragover", arrastrarSobre);
 	formulario.addEventListener("drop", soltar);
+	formulario.addEventListener("dragover", arrastrarSobre);
+	
+	function soltar(e){
+		//var idArrastrado = e.dataTransfer.getData("text");
+		var elementoArrastrado = document.getElementById(e.dataTransfer.getData("text"));
+		this.insertBefore(elementoArrastrado, this.children[4]);
+		this.classList.remove("over");
+	}
 
-	function entraArrastrar(){
+		function entraArrastrar(e){
 		this.classList.add("over");
 	}
 
-	function arrastrarSobre(){ 
+	function arrastrarSobre(e){ 
 		e.preventDefault();
-	}
-
-	function soltar(){
-		var idArrastrado = e.dataTransfer.getData("text");
-		idArrastrado.setAttribute("id", "idArrastrado");
-		var elementoArrastrado = document.getElementById(idArrastrado);
-		var temporal = this.innerHTML;
-		this.insertBefore(elementoArrastrado, this.childNodes[1]);
-		this.classList.remove("over");
 	}
 
 	var input = document.createElement("input");
@@ -91,7 +88,6 @@ function newLista(e){
 			function guardarTexto(e){
 				e.preventDefault();
 				var guardarTexto = document.createElement("div");
-				guardarTexto.setAttribute("id", "guardarTexto" + contador);
 	
 				var textoTextArea = añadirTarjeta.value;
 				guardarTexto.innerHTML = textoTextArea;
@@ -102,19 +98,20 @@ function newLista(e){
 				botonAñadir.style.display = "none";
 				enlace.style.display = "inline-block";
 
-				guardarTexto.setAttribute('draggable', true);
+				guardarTexto.draggable = true;
+				guardarTexto.id = "id" + contador;
 				guardarTexto.addEventListener("dragstart", empiezaArrastrar);
-				guardarTexto.addEventListener("dragend", terminarArrastrar);
-				contador++; 
+				// guardarTexto.addEventListener("dragend", terminarArrastrar);
+				contador+=1; 
 
 				function empiezaArrastrar(e){
 					e.dataTransfer.setData("text", this.id);
-					this.style.opacity = "0.4";
+					
 				}
 
-				function terminarArrastrar(e){
-					this.style.opacity = null;
-				}
+				// function terminarArrastrar(e){
+				// 	this.style.opacity = null;
+				// }
 			}
 		}
 	}
