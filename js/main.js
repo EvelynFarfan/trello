@@ -36,7 +36,6 @@ function newLista(e){
 		var elementoArrastrado = document.getElementById(e.dataTransfer.getData("text"));
 		this.insertBefore(elementoArrastrado, this.children[3]);
 		this.classList.remove("over");
-		// this.classList.add("animated","shake");
 	}
 
 	var input = document.createElement("input");
@@ -112,7 +111,7 @@ function newLista(e){
 
 				function terminarArrastrar(e){
 					this.classList.remove("colorDnD");
-					
+					this.classList.add("animated","jello");
 				}
 			}
 		}
