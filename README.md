@@ -1,11 +1,11 @@
 # Ejercicio - Trello
 
-Link del Proyecto : https://efarfan2393.github.io/trello/
+Link del Proyecto : https://evelynfarfan.github.io/trello/
 
 Este proyecto consistió en realizar una réplica del Trello,
 utilizando javascript, navegación por el DOM, creación de elementos y drag and drop.
 
-<a href="http://4.1m.yt/DZj4E0Z.png" target="_blank"><img src="http://4.1m.yt/DZj4E0Z.png" alt="ImgLand.net image" /></a>
+<img src="https://vgy.me/Yw0NFM.png">
 
 ## Parte 1
 
